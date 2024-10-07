@@ -11,11 +11,11 @@
             let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
             if (!endEl.innerHTML) {
                 let parentCell = endEl.closest('.slick-cell');
-                let assingmentID = '';
+                let assignmentID = '';
                 if (parentCell) {
                     parentCell.classList.forEach(function (className) {
                         if (className.includes('assignment_')) {
-                            assginmentID = className.replace('assignment_', '');
+                            assignmentID = className.replace('assignment_', '');
                         }
                     });
                 }
