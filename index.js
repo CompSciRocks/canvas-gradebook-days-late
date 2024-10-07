@@ -1,5 +1,8 @@
-// (function () {
-//     'use strict';
+// Copyright 2024 Ryan Nutt / CompSci.rocks
+// This code is licensed under the GPL v3.0 license.
+// https://www.gnu.org/licenses/gpl-3.0.html
+//
+// For more information, visit https://compsci.rocks
 
 // Get course ID
 let courseID = ENV.current_context.id;
@@ -9,7 +12,6 @@ console.info('host', host);
 
 let interval = setInterval(function () {
     let lateEls = document.querySelectorAll('.gradebook-cell.late');
-    console.info(lateEls);
     lateEls.forEach(function (el) {
         let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
         if (endEl.innerHTML.trim() == '') {
@@ -48,4 +50,3 @@ let interval = setInterval(function () {
         }
     });
 }, 2_500);
-// })

@@ -11,7 +11,7 @@
     "url": "git+https://github.com/CompSciRocks/canvas-gradebook-days-late.git"
   },
   "author": "Ryan Nutt",
-  "license": "ISC",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/CompSciRocks/canvas-gradebook-days-late/issues"
   },
