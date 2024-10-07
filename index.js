@@ -12,7 +12,7 @@ let interval = setInterval(function () {
     console.info(lateEls);
     lateEls.forEach(function (el) {
         let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
-        if (!endEl.innerHTML) {
+        if (endEl.innerHTML.trim() == '') {
             let parentCell = endEl.closest('.slick-cell');
             let assignmentID = '';
             if (parentCell) {
@@ -33,10 +33,6 @@ let interval = setInterval(function () {
                 });
             }
 
-            console.log('courseID', courseID);
-            console.log('studentID', studentID);
-            console.log('assignmentID', assignmentID);
-
 
             if (studentID && assignmentID) {
                 let url = `${host}/api/v1/courses/${courseID}/assignments/${assignmentID}/submissions/${studentID}`;
@@ -44,7 +40,7 @@ let interval = setInterval(function () {
                     .then(response => response.json())
                     .then(data => {
                         if (data.late) {
-                            let daysLate = Math.round(data.seconds_late / 60 / 60 / 24 * 100 / 100);
+                            let daysLate = Math.round(data.seconds_late / 60 / 60 / 24 * 100) / 100;
                             endEl.innerHTML = '<span style="font-size:75%;">(' + daysLate + ')</span>';
                         }
                     });
