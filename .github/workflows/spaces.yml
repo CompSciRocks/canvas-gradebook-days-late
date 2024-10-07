@@ -1,0 +1,22 @@
+name: Upload to DO Spaces CDN
+on:
+  push:
+    branches:
+      - main
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Upload 
+        uses: BetaHuhn/do-spaces-action@latest
+        with: 
+          access_key: ${{ secrets.ACCESS_KEY }}
+          secret_key: ${{ secrets.SECRET_KEY }}
+          space_name: ${{ secrets.SPACE_NAME }}
+          space_region: ${{ secrets.SPACE_REGION }}
+          source: ./index.js
+          cdn_domain: ${{ secrets.CDN_DOMAIN }}
+          out_dir: canvas/days-late/
+          versioning: true
