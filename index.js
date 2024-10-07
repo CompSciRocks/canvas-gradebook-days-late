@@ -5,7 +5,7 @@
     let courseID = ENV.current_context.id;
     let host = location.protocol + '//' + location.host;
 
-    let interval = setInterval(() => {
+    let interval = setInterval(function () {
         let lateEls = document.querySelectorAll('.gradebook-cell.late');
         lateEls.forEach(function (el) {
             let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
@@ -21,7 +21,7 @@
                 }
 
                 let studentID = '';
-                let studentEl = parentCell.closest('.slick-row');
+                let studentEl = endEl.closest('.slick-row');
                 if (studentEl) {
                     studentEl.classList.forEach(function (className) {
                         if (className.includes('student_')) {
