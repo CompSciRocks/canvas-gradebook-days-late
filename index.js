@@ -31,7 +31,7 @@
                 }
 
                 if (studentID && assignmentID) {
-                    let url = `${host}/api/v1/courses/${course}/assignments/${assignmentID}/submissions/${studentID}`;
+                    let url = `${host}/api/v1/courses/${courseID}/assignments/${assignmentID}/submissions/${studentID}`;
                     fetch(url)
                         .then(response => response.json())
                         .then(data => {
