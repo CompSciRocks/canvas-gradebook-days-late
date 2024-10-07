@@ -4,9 +4,12 @@
     // Get course ID
     let courseID = ENV.current_context.id;
     let host = location.protocol + '//' + location.host;
+    console.info('courseID', courseID);
+    console.info('host', host);
 
     let interval = setInterval(function () {
         let lateEls = document.querySelectorAll('.gradebook-cell.late');
+        console.info(lateEls);
         lateEls.forEach(function (el) {
             let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
             if (!endEl.innerHTML) {
