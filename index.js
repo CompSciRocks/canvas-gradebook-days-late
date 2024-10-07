@@ -30,6 +30,11 @@
                     });
                 }
 
+                console.log('courseID', courseID);
+                console.log('studentID', studentID);
+                console.log('assignmentID', assignmentID);
+
+
                 if (studentID && assignmentID) {
                     let url = `${host}/api/v1/courses/${courseID}/assignments/${assignmentID}/submissions/${studentID}`;
                     fetch(url)
