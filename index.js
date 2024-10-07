@@ -11,7 +11,7 @@
             let endEl = el.querySelector('.Grid__GradeCell__EndContainer');
             if (!endEl.innerHTML) {
                 let parentCell = endEl.closest('.slick-cell');
-                let assginmentID = '';
+                let assingmentID = '';
                 if (parentCell) {
                     parentCell.classList.forEach(function (className) {
                         if (className.includes('assignment_')) {
