@@ -16,7 +16,7 @@ This is a very short Tamper Monkey script that will add the number of days late 
 ```javascript
 // ==UserScript==
 // @name         Days Late in Canvas Gradebook
-// @namespace    http://tampermonkey.net/
+// @namespace    https://compsci.rocks
 // @version      2024-10-07
 // @description  Adds the number of days late to the Canvas gradebook.
 // @author       Ryan Nutt

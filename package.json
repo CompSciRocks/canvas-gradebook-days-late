@@ -1,6 +1,6 @@
 {
   "name": "compsci-rock-canvas-days-late",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Adds how many days late an assignment was in Canvas gradebook using a Tamper Monkey script",
   "main": "index.js",
   "scripts": {
